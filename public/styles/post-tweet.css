@@ -1,0 +1,56 @@
+.post-tweet{
+  display:flex;
+  flex-direction: column;
+  border: solid black;
+}
+
+.user-infor{
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+
+.fa-child{
+  font-size: 70px;
+  margin: 20px;
+}
+
+.user-name{
+  font-size: 40px;
+
+} 
+
+.user-link{
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.tweet-content{
+  width: 95%;
+  margin:   auto;
+  border-bottom: solid black;
+  font-size: 30px;
+}
+
+.footnotes{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.user-tags{
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+} 
+
+.icon-tag.fas:hover{
+  color: yellow;
+}

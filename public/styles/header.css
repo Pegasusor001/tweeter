@@ -1,0 +1,22 @@
+header{
+  display:flex;
+  height: 400px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: sandybrown;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  margin-top: 120px;
+}
+
+.name{
+  position: absolute;
+  top: 230px;
+}
+
+.girl-img{
+  position:absolute;
+  top: 10px
+}
+
