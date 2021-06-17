@@ -12,8 +12,5 @@ $(document).ready(function(){
   });
   
 
-  const timePassed = timeago.format(1623625371661);
-  $('.date').text(timePassed);
-
 })
 

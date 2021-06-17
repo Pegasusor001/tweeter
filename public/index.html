@@ -40,9 +40,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/post-tweet.js"></script>
-
   </head>
 
   <body>
@@ -71,6 +68,8 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div class="error-message"></div>
+
         <form method="POST" action="/tweets">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class='submit-button'>
@@ -80,7 +79,7 @@
         </form>
       </section>
 
-      <section class='post-tweet'>
+      <!-- <section class='post-tweet'>
         <div class='user-infor'>
           <i class="fas fa-child"></i>
           <p class='user-name'>xxxx</p>
@@ -98,7 +97,7 @@
           </footer>
         </div>
 
-      </section>
+      </section> -->
 
 
     </main>
