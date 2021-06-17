@@ -3,7 +3,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   height: 120px;
-  background-color: #4056A1 ;
+  background-color: sandybrown ;
   color: white;
   padding-right: 1.5em;
   padding-left: 1.5em;
@@ -33,4 +33,10 @@ nav{
 span{
   font-family: 'Bungee';
   font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  nav{
+    background-color: #4056A1
+  }
 }

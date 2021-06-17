@@ -19,23 +19,41 @@ body {
   font-size: 24px;
   font: 'Source Sans Pro';
   z-index: 0;
+}
+
+main{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
 }
+
+section{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- main{
-   width: 90%;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   margin-left: auto;
-   margin-right: auto;
-   position: relative;
- }
 
- section{
-   width: 100%;
-   margin-bottom: 50px;
- }
+
+ @media only screen and (min-width: 768px) {
+  body{
+    display: flex;
+  }
+ 
+
+  header {
+    width: 40%; 
+  }
+
+  main {
+    width: 40%;
+    margin-top: 200px;
+  }
+}
