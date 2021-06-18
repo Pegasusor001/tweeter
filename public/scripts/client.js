@@ -45,13 +45,16 @@ $(document).ready(function() {
   };
 
   loadTweets();
+  $('.new-tweet').hide();
+
+  $(".title-right").click(function () {
+    $('.new-tweet').toggle();
+  });
+
   $("form").on("submit", function(event) {
     event.preventDefault();
     let inputValue = $('#tweet-text').val().length;
-    $('.error-message')
-      .html("")
-      .slideUp();
-
+    
     if (inputValue === 0) {
       $('.error-message')
         .html("<p class='error'>Please enter something!</p>")

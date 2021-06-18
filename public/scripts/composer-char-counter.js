@@ -9,6 +9,11 @@ $(document).ready(function(){
     } else {
       $('.counter').css('color', 'black');
     }
+
+    $('.error-message')
+    .html("")
+    .slideUp();
+    
   });
   
 
