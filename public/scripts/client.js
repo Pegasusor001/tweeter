@@ -1,29 +1,26 @@
-$(document).ready(function () {
-  const escape = function (str) {
+$(document).ready(function() {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
   
   const loadTweets = function() {
     $.ajax(' http://localhost:8080/tweets', { method: 'GET' })
-    .then(function(data){
-      console.log(data[data.length - 1])
-      console.log(data);
-      renderTweets(data);
-    })
-  }
+      .then(function(data) {
+        renderTweets(data);
+      });
+  };
   
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
-      let newTweet = createTweetElement(tweet)
+      let newTweet = createTweetElement(tweet);
       $('.new-tweet').after(newTweet);
     }
-
-  }
+  };
   
   const createTweetElement = function(tweet) {
-    const timePassed = timeago.format(tweet.created_at); 
+    const timePassed = timeago.format(tweet.created_at);
     let newTweet = $(`
       <section class='post-tweet'>
         <div class='user-infor'>
@@ -43,23 +40,27 @@ $(document).ready(function () {
           </footer>
         </div>
 
-      </section>`)
+      </section>`);
     return newTweet;
-  }
+  };
 
   loadTweets();
-  $("form").on("submit", function (event) {
+  $("form").on("submit", function(event) {
     event.preventDefault();
-    inputValue = $('#tweet-text').val().length;
+    let inputValue = $('#tweet-text').val().length;
+    $('.error-message')
+      .html("")
+      .slideUp();
+
     if (inputValue === 0) {
       $('.error-message')
-      .html("<p class='error'>Please enter something!</p>")
-      .slideDown()
+        .html("<p class='error'>Please enter something!</p>")
+        .slideDown();
 
     } else if (inputValue > 140) {
       $('.error-message')
-      .html("Too many words!")
-      .slideDown()
+        .html("Too many words!")
+        .slideDown();
 
     } else {
       $.ajax({
@@ -67,22 +68,21 @@ $(document).ready(function () {
         method: "POST",
         data: $(this).serialize()
       })
-      .then(() => {
-        $('#tweet-text').val('');
-        $('#tweet-text').trigger('input');
-        return $.ajax(' http://localhost:8080/tweets', { method: 'GET' })
-      })
-      .then((tweets) => {
-        const lasttweet = tweets.pop();
-        let newTweet = createTweetElement(lasttweet)
-        $('.new-tweet').after(newTweet);
-      })
-      .catch((error) => {
-        alert('there is an error')
-      })
-    } 
+        .then(() => {
+          $('#tweet-text').val('');
+          $('#tweet-text').trigger('input');
+          return $.ajax(' http://localhost:8080/tweets', { method: 'GET' });
+        })
+        .then((tweets) => {
+          const lasttweet = tweets.pop();
+          let newTweet = createTweetElement(lasttweet);
+          $('.new-tweet').after(newTweet);
+        })
+        .catch((error) => {
+          alert(`there is an ${error}`);
+        });
+    }
   });
-
-})
+});
 
 

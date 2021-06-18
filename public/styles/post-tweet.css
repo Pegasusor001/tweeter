@@ -10,7 +10,6 @@
   margin-bottom: 80px;
 }
 
-
 .fa-child{
   font-size: 70px;
   margin: 20px;
@@ -39,8 +38,8 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
