@@ -4,8 +4,8 @@ Tweet is a tiny one page app for users to post tweets.
 
 ## Final Product
 
-!["Screenshot of URLs page"]()
-!["Screenshot of Create New page"]()
+!["Screenshot of URLs page"](https://github.com/Pegasusor001/tweeter/blob/master/docs/Desktop%20view.png)
+!["Screenshot of Create New page"](https://github.com/Pegasusor001/tweeter/blob/master/docs/Mobie%20View.png)
 
 ## Dependencies
 
